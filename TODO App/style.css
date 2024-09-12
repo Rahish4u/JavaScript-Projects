@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.container{
+    background-color: white;
+    max-width: 600px;
+    margin: 50px 200px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    text-align: center;
+}
+
+#toDoInput{
+    width: 75%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#addTodo{
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #067aa8;
+    border-radius:5px ;
+    cursor: pointer;
+}
+
