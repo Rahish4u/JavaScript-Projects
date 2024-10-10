@@ -1,11 +1,20 @@
+:root{
+    --body-background:#f4f4f9;
+    --body-container:#f9f8f8;
+    --btn-Primary:#067aa8;
+    --btn-Secondary:#e2cd0e;
+    --btn-edit:#ffd700;
+    --btn-complete:#32cd32;
+    --btn-delete:#ff6347
+}
 body{
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: var(--body-background);
 }
 
 .container{
-    background-color: white;
+    background-color:var(--body-container);
     max-width: 600px;
     margin: 50px 200px;
     padding: 5px;
@@ -28,8 +37,60 @@ h1{
     padding: 10px 20px;
     border: none;
     color: white;
-    background-color: #067aa8;
+    background-color: var(--btn-Primary);
     border-radius:5px ;
     cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item-container{
+    padding:10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-item-container:last-child{
+    border-bottom: none;
+}
+
+.filterBtn , .edit-button, .delete-button, .completed-button{
+    margin: 10px 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--btn-Secondary);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.edit-button{
+    background-color: var(--btn-edit);
+}
+
+.delete-button{
+    background-color:var(--btn-delete);
+}
+
+.completed-button{
+    background-color: var(--btn-complete);
+}
+
+.filterBtn:hover{
+    background-color: var(--btn-Primary);
+    color: var(--body-container);
+}
+
+.todo-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.5s;
+}
+
+.todo-item-container:hover{
+    background-color: #e8f1f2;
 }
 
