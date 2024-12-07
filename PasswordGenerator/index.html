@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./src/output.css">
+  </head>
+  <body class="bg-blue-950 text-white">
+    <div class="flex items-center justify-center min-h-screen px-4">
+      <div class="bg-gray-800 text-white p-6 rounded-lg shadow-xl max-w-lg w-full border border-gray-600">
+        <h1 class="text-center text-3xl font-bold mb-6">Password Generator</h1>
+        
+        <!-- Password Display -->
+        <div class="mb-6">
+          <input
+            type="text"
+            id="input"
+            class="w-full p-3 rounded-md text-gray-900 border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Your password will appear here"
+            readonly
+          />
+        </div>
+        
+        <!-- Buttons -->
+        <div class="mb-6 flex flex-wrap gap-4">
+          <button
+            id="generate"
+            class="flex-1 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-200"
+          >
+            Generate
+          </button>
+          <button
+            id="copy"
+            class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md transition duration-200"
+          >
+            Copy
+          </button>
+        </div>
+        
+        <!-- Password Length -->
+        <div class="mb-6 flex gap-8 items-center justify-start">
+          <label for="length" class="block text-md font-medium">Password Length</label>
+          <input
+            type="number"
+            id="length"
+            min="1"
+            max="12"
+            value="12"
+            class="w-auto px-2 rounded-md text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        
+        <!-- Checkbox Options -->
+        <div class="space-y-4">
+          <label class="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id="uppercase"
+              class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500"
+            />
+            <span>Include uppercase letters</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id="lowercase"
+              class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500"
+            />
+            <span>Include lowercase letters</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id="numbers"
+              class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500"
+            />
+            <span>Include numbers</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id="symbols"
+              class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500"
+            />
+            <span>Include symbols</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
