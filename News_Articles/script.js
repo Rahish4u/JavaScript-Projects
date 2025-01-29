@@ -1,9 +1,28 @@
+var tl = gsap.timeline()
+
+document.addEventListener("DOMContentLoaded", () => {
+    tl.from(".nav-item", {
+        opacity: 0,
+        y: -50,
+        duration: 0.5,
+        stagger: 0.2 // Each item appears one after another
+    });
+
+    tl.from(".news-item", {
+        opacity: 0,
+        y: 30,
+        duration: 0.5,
+        stagger: 0.2,
+        delay: 0.5 // Delay to start after navbar animation
+    });
+});
+
 const categories = ['business', 'entertainment', 'health', 'science', 'sports', 'technology'];
 let currentCategory = 'business';
 let currentPage = 1;
 let pageSize = 12;
 let isLoading = false;
-const apiKey = '9eb4591488c04803a92c3953cdf88925'
+// const apiKey = '9eb4591488c04803a92c3953cdf88925'
 let searchQuery = '';
 
 const navDrawer = document.getElementById('nav-drawer');
@@ -30,6 +49,7 @@ function createCategoryElements(parent) {
         })
         parent.appendChild(navItem);
     })
+    
 }
 
 async function fetchNews() {
@@ -91,6 +111,7 @@ function displayNews(articles) {
 toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     toggleButton.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '🌞';
+    tl.restart(); // Replays the timeline from the start
 })
 
 menuButton.addEventListener('click', () => navDrawer.classList.toggle('open'))
